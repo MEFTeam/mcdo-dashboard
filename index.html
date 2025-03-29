@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل خدامة ماكدونالدز</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <img id="logo" src="logo.svg" alt="Logo" />
+    <h1>تسجيل دخول الخدمة</h1>
+
+    <label for="workerName">🧍‍♂️ سميتك:</label>
+    <input type="text" id="workerName" placeholder="اكتب سميتك هنا">
+    <button onclick="startWork()">دخول الخدمة</button>
+    <button onclick="startBreak()">بداية الراحة</button>
+    <button onclick="endBreak()">رجوع من الراحة</button>
+
+    <h3>الأنشطة ديال اليوم:</h3>
+    <table>
+      <thead>
+        <tr><th>التاريخ</th><th>الوقت</th><th>الحدث</th></tr>
+      </thead>
+      <tbody id="todayActivity"></tbody>
+    </table>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
