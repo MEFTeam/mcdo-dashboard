@@ -71,18 +71,18 @@ function startWorkTimer(name) {
     const minutes = Math.floor(diff / 60000);
 
     if (minutes >= 265) { // 4h25min
-      showNotification(name);
+      showNotification(`الخدام ${name} خدم 4h25min! خاصو يرتاح.`);
       notificationSent = true;
       clearInterval(interval);
     }
-  }, 60000); // كل دقيقة
+  }, 60000); // check every minute
 }
 
-function showNotification(name) {
+function showNotification(message) {
   if (Notification.permission === "granted") {
     new Notification("🚨 تنبيه", {
-      body: `الخدام ${name} خدم 4h25min! خاصو يرتاح.`,
-      icon: "https://cdn-icons-png.flaticon.com/512/888/888879.png"
+      body: message,
+      icon: "https://cdn-icons-png.flaticon.com/512/888/888879.png" // أيقونة التنبيه
     });
   }
 }
